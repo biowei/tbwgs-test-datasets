@@ -1,0 +1,4 @@
+sample,fastq_1,fastq_2
+TB_SIM1,https://raw.githubusercontent.com/biowei/tbwgs-test-datasets/main/reads/TB_SIM1_L001_R1.fastq.gz,https://raw.githubusercontent.com/biowei/tbwgs-test-datasets/main/reads/TB_SIM1_L001_R2.fastq.gz
+TB_SIM1,https://raw.githubusercontent.com/biowei/tbwgs-test-datasets/main/reads/TB_SIM1_L002_R1.fastq.gz,https://raw.githubusercontent.com/biowei/tbwgs-test-datasets/main/reads/TB_SIM1_L002_R2.fastq.gz
+TB_SIM2,https://raw.githubusercontent.com/biowei/tbwgs-test-datasets/main/reads/TB_SIM2_L001_R1.fastq.gz,https://raw.githubusercontent.com/biowei/tbwgs-test-datasets/main/reads/TB_SIM2_L001_R2.fastq.gz
