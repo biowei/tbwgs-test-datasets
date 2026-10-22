@@ -27,3 +27,20 @@ wgsim -N <pairs> -1 150 -2 150 -d 400 -s 50 -e 0.002 -r 0.0005 -R 0.1 -S <seed> 
 ## Samplesheets (`samplesheet/`)
 
 - `samplesheet_test.csv`: used by `-profile test`.
+
+## Frozen tbdb (`tbdb/`)
+
+`who_v2plus_c4167762.tar.gz` is the TB-Profiler database built from the `who_v2+` branch of
+[tbdb](https://github.com/jodyphelan/tbdb) at commit
+[`c4167762`](https://github.com/jodyphelan/tbdb/tree/c4167762ed361c679507e3f4ebe0cd277eae6102).
+Its `genome.fasta` and `mask.bed` are byte-identical to the files at that commit. The sha256 is in
+`tbdb/SHA256SUMS`.
+
+Command (TB-Profiler 6.7.0), then a reproducible archive of the database directory:
+
+```bash
+tb-profiler update_tbdb --branch who_v2+ --commit c4167762ed361c679507e3f4ebe0cd277eae6102 \
+    --prefix who_v2plus_c4167762 --db_dir db
+tar --sort=name --owner=0 --group=0 --numeric-owner --mtime='2026-10-21 00:00Z' \
+    -C db -cf - who_v2plus_c4167762 | gzip -n -9 > who_v2plus_c4167762.tar.gz
+```
